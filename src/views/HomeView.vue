@@ -5,11 +5,11 @@
   <div class="container">
   <masonry-wall :items="items" :ssr-columns="1" :column-width="350" :gap="16">
   <template #default="{ item }">
-    <a :href="item.link" style="text-decoration: none; color: inherit;">
+    <a :href="item.link" target="_blank" style="text-decoration: none; color: inherit;">
     <el-card :body-style="{ padding: '5px' }" shadow="hover" class="card-contaier">
       <img :src="item.image" class="card-image" alt="card image">
       <div class="card-content">
-        <h3>{{ item.title }}</h3>
+        <h3 class="atlas-title">{{ item.title }}</h3>
         <!-- <p>{{ item.description }}</p> -->
         <el-button type="primary" size="small" text bg>{{ item.genre }}</el-button>
       </div>
@@ -83,6 +83,11 @@ onMounted(async () => {
 
 .card-content {
   padding: 10px;
+}
+
+.atlas-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
 </style>
