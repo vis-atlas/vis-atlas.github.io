@@ -3,16 +3,18 @@
 <template>
   <!-- <Hero /> -->
   <div class="container">
-  <masonry-wall :items="items" :ssr-columns="1" :column-width="300" :gap="16">
+  <masonry-wall :items="items" :ssr-columns="1" :column-width="350" :gap="16">
   <template #default="{ item }">
-    <el-card :body-style="{ padding: '20px' }" shadow="hover" class="card-container">
+    <a :href="item.link" style="text-decoration: none; color: inherit;">
+    <el-card :body-style="{ padding: '5px' }" shadow="hover" class="card-contaier">
       <img :src="item.image" class="card-image" alt="card image">
       <div class="card-content">
         <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
-        <el-button type="primary" size="small" bg>{{ item.genre }}</el-button>
+        <!-- <p>{{ item.description }}</p> -->
+        <el-button type="primary" size="small" text bg>{{ item.genre }}</el-button>
       </div>
     </el-card>
+  </a>
   </template>
 </masonry-wall>
 </div>
@@ -60,27 +62,27 @@ onMounted(async () => {
 
 <style scoped>
 .container {
-  margin: 20px 90px;
+  margin:3% 10%;
 }
 
 .masonry-item {
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 .card-container {
-  width: 300px; 
-  margin-bottom: 16px; 
+  width: 350px;
+  margin-bottom: 16px;
 }
 
 .card-image {
   width: 100%;
   height: auto;
-  max-height: 200px; 
-  object-fit: cover; 
+  /* max-height: 200px; */
+  object-fit: cover;
 }
 
 .card-content {
-  padding: 20px;
+  padding: 10px;
 }
 
 </style>
