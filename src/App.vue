@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <NavBar />
     <router-view />
   </div>
@@ -8,3 +8,7 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
 </script>
+
+<style scoped>
+
+</style>

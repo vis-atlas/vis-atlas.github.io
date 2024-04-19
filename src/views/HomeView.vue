@@ -1,93 +1,159 @@
-
-
 <template>
-  <!-- <Hero /> -->
-  <div class="container">
-  <masonry-wall :items="items" :ssr-columns="1" :column-width="350" :gap="16">
-  <template #default="{ item }">
-    <a :href="item.link" target="_blank" style="text-decoration: none; color: inherit;">
-    <el-card :body-style="{ padding: '5px' }" shadow="hover" class="card-contaier">
-      <img :src="item.image" class="card-image" alt="card image">
-      <div class="card-content">
-        <h3 class="atlas-title">{{ item.title }}</h3>
-        <!-- <p>{{ item.description }}</p> -->
-        <el-button type="primary" size="small" text bg>{{ item.genre }}</el-button>
-      </div>
-    </el-card>
-  </a>
-  </template>
-</masonry-wall>
-</div>
+  <div class="card-container">
+    <div class="grid">
+      
+        <el-card shadow="always" class="home-card left-card">
+          <div slot="header" class="clearfix">
+            <span class="card-title">About</span>
+          </div>
+          <div>
+            <p v-html="formattedMessage"></p>
+          </div>
+        </el-card>
+
+        <el-card shadow="always" class="home-card right-card">
+          <div slot="header" class="clearfix">
+            <span class="card-title">Working Definition</span>
+          </div>
+          <div>
+            <p v-html="formattedDefinition"></p>
+          </div>
+        </el-card>
+
+        <el-card shadow="always" class="home-card right-card">
+          <div slot="header" class="clearfix">
+            <span class="card-title">Design Space</span>
+          </div>
+          <div>
+            <masonry-wall :items="items" :ssr-columns="1" :column-width="150" :gap="10">
+              <template #default="{ item }">
+                <el-card :body-style="{ padding: '5px' }" shadow="never" class="dimension-card">
+                  <div slot="header" class="dimension-title" :style="{backgroundColor: item.color}">
+                    <span>{{ item.dimension }}</span>
+                  </div>
+                  <div class="item-list">
+                    <ul class="dimension-items">
+                      <li v-for="(text, index) in item.items" :key="index">{{ text }}</li>
+                    </ul>
+                  </div>
+                </el-card>
+              </template>
+            </masonry-wall>
+          </div>
+        </el-card>
+
+    </div>
+  </div>
 </template>
 
-
 <script setup>
-// import Hero from "@/components/Hero.vue"
+import { ref, computed } from 'vue';
 
-import { ref, onMounted } from 'vue';
+const message = ref("We are currently witnessing an increase in web-based, data-driven initiatives that explain complex, contemporary issues through data and visualizations: climate change, sustainability, AI, or cultural discoveries. Many of these projects call themselves atlases, a term that historically referred to collections of maps or scientific illustrations. To answer the question of what makes a visualization atlas, we conducted a systematic analysis of 38 visualization atlases and semi-structured interviews with eight visualization atlas creators. Based on our results, we contribute (1) a <strong>definition</strong> of visualization atlases as an emerging format to present complex topics in a holistic, data-driven, and curated way through visualization, (2) a set of <strong>design patterns</strong> and design dimensions that led to (3) defining 5 visualization atlas <strong>genres</strong>, and (4) <strong>insights into the atlas creation</strong> from interviews. We found that visualization atlases are unique in that they combine exploratory visualization with narrative elements from data-driven storytelling and structured navigation mechanisms. They can act as a reference, communication or discovery tools targeting a wide range of audiences with different levels of domain knowledge.");
 
-const items = ref([]);
-
-function parseCSV(text) {
-  const lines = text.split('\n');
-  const result = [];
-  const headers = lines[0].split(',').map(header => header.trim());
-
-  for (let i = 1; i < lines.length; i++) {
-    if (!lines[i]) continue;
-    const obj = {};
-    const currentline = lines[i].split(',');
-
-    for (let j = 0; j < headers.length; j++) {
-      obj[headers[j]] = currentline[j].trim();
-    }
-
-    result.push(obj);
-  }
-
-  return result;
-}
-
-onMounted(async () => {
-  try {
-    const response = await fetch('/collection.csv');
-    const csvText = await response.text();
-    items.value = parseCSV(csvText);
-  } catch (error) {
-    console.error("Failed to load CSV data:", error);
-  }
+const formattedMessage = computed(() => {
+  return message.value.replace(/definition/g, '<strong>definition</strong>').replace(/design patterns/g, '<strong>design patterns</strong>').replace(/genres/g, '<strong>genres</strong>').replace(/insights into the atlas creation/g, '<strong>insights into the atlas creation</strong>');
 });
+
+const definition = ref("A <strong>Visualization Atlas</strong> is a highly-curated collection of visualizations and explanations, aimed at promoting data-driven approaches to provide information about complex topics, usually with a global relevance.")
+
+// Create a computed property to format the definition
+const formattedDefinition = computed(() => {
+  return definition.value.replace(/Visualization Atlas/g, '<strong>Visualization Atlas</strong>');
+});
+
+const items = ref([
+  {
+    dimension: 'Entry page',
+    items: ['Featured', 'Random data', 'Metadata', 'table of content', 'personalization', 'lenses', 'Interactive vis', 'Vis screenshot', 'Cover vis/teaser'],
+    color: '#B6D7A8'
+  },
+  {
+    dimension: 'Content page',
+    items: ['Report', 'Article', 'Dashboard', 'Exploratory vis', 'Chart collection', 'Table', 'Combination'],
+    color: '#9FC5E8'
+  },
+  {
+    dimension: 'Atlas structure',
+    items: ['Parallel', 'Hierarchical', 'Multifacets', 'No structure'],
+    color: '#FFE599'
+  },
+  {
+    dimension: 'Vis interaction',
+    items: ['Create focus', 'Customize data', 'Switch views', 'Coordinated views', 'Configure Layout'],
+    color: '#B4A7D6'
+  },
+  {
+    dimension: 'Atlas navigation',
+    items: ['Search', 'Visual identity', 'Structural overview', 'Page links'],
+    color: '#F9CB9C'
+  },
+  {
+    dimension: 'Onboarding',
+    items: ['Walkthrough', 'Glossary', 'Video', 'Textual user guide'],
+    color: '#D5A6BD'
+  },
+  {
+    dimension: 'Transparency',
+    items: ['Data sourced', 'Export data/vis', 'Open source', 'Quality Evaluation', 'Methodology'],
+    color: '#A2C4C9'
+  }
+]);
 
 </script>
 
+
 <style scoped>
-.container {
-  margin:3% 10%;
-}
-
-.masonry-item {
-  margin-bottom: 30px;
-}
-
 .card-container {
-  width: 350px;
-  margin-bottom: 16px;
+  margin: 5% 5%;
 }
 
-.card-image {
-  width: 100%;
-  height: auto;
-  /* max-height: 200px; */
-  object-fit: cover;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 30px; 
 }
 
-.card-content {
-  padding: 10px;
+.left-card {
+  grid-row: span 2; /* Makes the left card span two rows */
 }
 
-.atlas-title {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+.right-card {
+  grid-row: span 1; /* Makes the right cards span one row */
 }
 
+.card-title {
+  font-size: 20px;
+  color: blueviolet;
+}
+
+.dimension-card {
+  padding: 0;
+}
+
+.dimension-items {
+  list-style-type: none;
+  padding: 0;
+  line-height: 1.1;
+  font-size: 12px;
+}
+
+.dimension-title {
+  margin: 0;
+  padding: 0;
+}
+
+.item-list {
+  padding-top: 5px;
+}
+
+.equal-height-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+::v-deep p strong {
+  font-weight: bold !important;
+}
 </style>
