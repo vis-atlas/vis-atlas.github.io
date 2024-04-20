@@ -9,7 +9,7 @@
     },
     {
         "dimension": "entry page",
-        "items": ["Featured", "Random data", "Metadata", "Table of content", "Personalization", "Lenses", "Interactive vis", "Vis screenshot", "Cover vis/teaser"]
+        "items": ["Featured", "Random data", "Metadata", "Personalisation", "Table of content", "Lenses", "Interactive vis", "Vis screenshot", "Cover vis/teaser"]
       },
       {
         "dimension": "content page",
