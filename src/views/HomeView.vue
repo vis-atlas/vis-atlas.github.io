@@ -125,7 +125,8 @@ const items = ref([
 
 .card-title {
   font-size: 20px;
-  color: blueviolet;
+  color: rgb(64, 158, 255);
+  font-weight: bold;
 }
 
 .dimension-card {

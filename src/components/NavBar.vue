@@ -102,7 +102,7 @@
   }
 
   .nav-item.router-link-active {
-      border-bottom: 6px solid #7126EC;
+      border-bottom: 6px solid rgb(64, 158, 255);
   }
 
   .hero-full, .hero-small {

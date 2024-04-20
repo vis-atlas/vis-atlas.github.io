@@ -1,0 +1,38 @@
+[
+    {
+        "dimension": "genre",
+        "items": ["storybank", "observatory", "series", "monographs", "exploratoria"]
+    },
+    {
+        "dimension": "data",
+        "items": ["Updatable", "multiple sources", "External dataset", "Internal dataset"]
+    },
+    {
+        "dimension": "entry page",
+        "items": ["Featured", "Random data", "Metadata", "Personalisation", "Table of content", "Lenses", "Interactive vis", "Vis screenshot", "Cover vis/teaser"]
+      },
+      {
+        "dimension": "content page",
+        "items": ["Report", "Article", "Dashboard", "Exploratory vis", "Chart collection", "Table", "Combination"]
+      },
+      {
+        "dimension": "atlas structure",
+        "items": ["Parallel", "Hierarchical", "Multifacets", "No structure"]
+      },
+      {
+        "dimension": "vis interaction",
+        "items": ["Create focus", "Customize data", "Switch views", "Coordinated views", "Configure Layout"]
+      },
+      {
+        "dimension": "atlas navigation",
+        "items": ["Search", "Visual identity", "Structural overview", "Page links"]
+      },
+      {
+        "dimension": "onboarding",
+        "items": ["Walkthrough", "Glossary", "Video", "Textual user guide"]
+      },
+      {
+        "dimension": "transparency",
+        "items": ["Data sourced", "Export data/vis", "Open source", "Quality Evaluation", "Methodology"]
+      }
+]
