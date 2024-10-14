@@ -20,6 +20,10 @@
         "items": ["Parallel", "Hierarchical", "Multifacets", "No structure"]
       },
       {
+        "dimension": "vis type",
+        "items": ["Basic charts", "Maps", "Networks", "Trees", "Projection", "Glyphys", "Others"]
+      },
+      {
         "dimension": "vis interaction",
         "items": ["Create focus", "Customize data", "Switch views", "Coordinated views", "Configure Layout"]
       },

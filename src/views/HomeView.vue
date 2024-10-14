@@ -55,7 +55,7 @@ const formattedMessage = computed(() => {
   return message.value.replace(/definition/g, '<strong>definition</strong>').replace(/design patterns/g, '<strong>design patterns</strong>').replace(/genres/g, '<strong>genres</strong>').replace(/insights into the atlas creation/g, '<strong>insights into the atlas creation</strong>');
 });
 
-const definition = ref("A <strong>Visualization Atlas</strong> is a highly-curated collection of visualizations and explanations, aimed at promoting data-driven approaches to provide information about complex topics, usually with a global relevance.")
+const definition = ref("A <strong>Visualization Atlas</strong> is a compendium of (web) pages aimed at explaining and supporting exploration of data about a dedicated topic through data, visualizations and narration.")
 
 // Create a computed property to format the definition
 const formattedDefinition = computed(() => {
@@ -77,6 +77,11 @@ const items = ref([
     dimension: 'Atlas structure',
     items: ['Parallel', 'Hierarchical', 'Multifacets', 'No structure'],
     color: '#FFE599'
+  },
+  {
+    dimension: 'Vis type',
+    items: ['Basic charts', 'Maps', 'Networks', 'Trees', 'Projection', 'Glyphys', 'Others'],
+    color: '#A8D7BE'
   },
   {
     dimension: 'Vis interaction',
