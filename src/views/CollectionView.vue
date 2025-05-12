@@ -36,7 +36,7 @@
               <h3 class="atlas-title">{{ item.title }}</h3>
               <div class="button-badge-wrapper">
                 <el-button type="primary" size="small" text bg>{{ item.Genre }}</el-button>
-                <template v-if="filteredItems.indexOf(item) < 2">
+                <template v-if="filteredItems.indexOf(item) < 3">
                   <el-button type="success" round size="small" style="margin-left: 0;">New!</el-button>
                 </template>
               </div>
