@@ -7,13 +7,29 @@
             <span class="card-title">About</span>
           </div>
           <div>
-            <p v-html="formattedMessage"></p>
+            <!-- <p v-html="formattedMessage"></p> -->
+            <p>Visualization atlases are an emerging form of web-based visualization that explains complex, contemporary issues like climate change, sustainability, AI, or cultural discoveries. Visualization atlases are unique in the way they combine exploratory visualization, narrative elements from data-driven storytelling, and structured navigation mechanics. They target a wide range of audiences with different levels of domain knowledge, acting as tools for study, communication, and discovery.
+            </p>
+            <br>
+            <p>
+              This website is an extension for our paper <span style="font-weight: 600;">Visualization Atlases: Explaining and Exploring Complex Topics through Data, Visualization, and Narration</span>, where we conducted a systematic analysis of 33 visualization atlases and semi-structured interviews with eight visualization atlas creators to understand this emerging genre and inform their design.
+            </p>
+          </div>
+
+          <br />
+          <div slot="header" class="clearfix">
+            <span class="card-title">Publication</span>
+          </div>
+          <div>
+            <p>Wang, J., Shu X., Bach B., Hinrichs U., (2024). Visualization Atlases: Explaining and Exploring Complex Topics through Data, Visualization, and Narration. <span style="font-style: italic;">Transactions on Visualization and Computer Graphics.</span>, 31(1)437 - 447, 2024. doi: 10.1109/TVCG.2024.3456311</p>
+            <br>
+            The paper is available on <a href="https://arxiv.org/abs/2408.07483" target="_blank">arXiv</a>.
           </div>
         </el-card>
 
         <el-card shadow="always" class="home-card right-card">
           <div slot="header" class="clearfix">
-            <span class="card-title">Working Definition</span>
+            <span class="card-title">What is a Visualization Atlas?</span>
           </div>
           <div>
             <p v-html="formattedDefinition"></p>
@@ -49,7 +65,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 
-const message = ref("We currently witness an increase in web-based, data-driven initiatives that call themselves “atlases” while explaining complex, contemporary issues through data and visualizations: climate change, sustainability, AI, or cultural discoveries. To understand this emerging genre and inform their design, study, and authoring support, we conducted a systematic analysis of 33 visualization atlases and semi-structured interviews with eight visualization atlas creators. Based on our results, we contribute (1) a definition of a visualization atlas as a compendium of (web) pages aimed at explaining and supporting exploration of data about a dedicated topic through data, visualizations and narration. (2) a set of design patterns of 8 design dimensions, (3) insights into the atlas creation from interviews and (4) the definition of 5 visualization atlas genres. We found that visualization atlases are unique in the way they combine i) exploratory visualization, ii) narrative elements from data-driven storytelling and iii) structured navigation mechanisms. They target a wide range of audiences with different levels of domain knowledge, acting as tools for study, communication, and discovery. We conclude with a discussion of current design practices and emerging questions around the ethics and potential real-world impact of visualization atlases, aimed to inform the design and study of visualization atlases.");
+const message = ref("Visualization atlases are an emerging form of web-based visualization that explains complex, contemporary issues like climate change, sustainability, AI, or cultural discoveries. Visualization atlases are unique in the way they combine exploratory visualization, narrative elements from data-driven storytelling, and structured navigation mechanics. They target a wide range of audiences with different levels of domain knowledge, acting as tools for study, communication, and discovery.");
 
 const formattedMessage = computed(() => {
   return message.value.replace(/definition/g, '<strong>definition</strong>').replace(/design patterns/g, '<strong>design patterns</strong>').replace(/genres/g, '<strong>genres</strong>').replace(/insights into the atlas creation/g, '<strong>insights into the atlas creation</strong>');

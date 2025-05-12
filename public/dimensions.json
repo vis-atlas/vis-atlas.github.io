@@ -1,42 +1,42 @@
 [
     {
-        "dimension": "genre",
-        "items": ["storybank", "observatory", "series", "monographs", "exploratoria"]
+        "dimension": "Genre",
+        "items": ["Storybank", "Observatory", "Series", "Monograph", "Exploratoria"]
     },
     {
-        "dimension": "data",
-        "items": ["Updatable", "multiple sources", "External dataset", "Internal dataset"]
+        "dimension": "Data",
+        "items": ["Updatable", "Multiple sources", "External dataset", "Internal dataset"]
     },
     {
-        "dimension": "entry page",
+        "dimension": "Entry page",
         "items": ["Featured", "Random data", "Metadata", "Personalisation", "Table of content", "Lenses", "Interactive vis", "Vis screenshot", "Cover vis/teaser"]
       },
       {
-        "dimension": "content page",
+        "dimension": "Content page",
         "items": ["Report", "Article", "Dashboard", "Exploratory vis", "Chart collection", "Table", "Combination"]
       },
       {
-        "dimension": "atlas structure",
+        "dimension": "Atlas structure",
         "items": ["Parallel", "Hierarchical", "Multifacets", "No structure"]
       },
       {
-        "dimension": "vis type",
+        "dimension": "Vis type",
         "items": ["Basic charts", "Maps", "Networks", "Trees", "Projection", "Glyphys", "Others"]
       },
       {
-        "dimension": "vis interaction",
+        "dimension": "Vis interaction",
         "items": ["Create focus", "Customize data", "Switch views", "Coordinated views", "Configure Layout"]
       },
       {
-        "dimension": "atlas navigation",
+        "dimension": "Atlas navigation",
         "items": ["Search", "Visual identity", "Structural overview", "Page links"]
       },
       {
-        "dimension": "onboarding",
+        "dimension": "Onboarding",
         "items": ["Walkthrough", "Glossary", "Video", "Textual user guide"]
       },
       {
-        "dimension": "transparency",
+        "dimension": "Transparency",
         "items": ["Data sourced", "Export data/vis", "Open source", "Quality Evaluation", "Methodology"]
       }
 ]

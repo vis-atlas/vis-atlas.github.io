@@ -1,4 +1,7 @@
 <template>
+  <div class="call-for-contributions">
+    Our collection is growing! Share your atlas cases by <a href="mailto:vis-atlas@outlook.com">emailing us.</a>
+  </div>
   <el-container class="container">
     <el-aside class="filter-container">
       <div class="side-title-wrapper">
@@ -15,7 +18,7 @@
           v-for="item in dimension.items"
           :key="item"
           @click="toggleFilter(dimension.dimension, item)"
-          :type="selectedFilters[dimension.dimension].includes(item) ? 'primary' : 'default'"
+          :type="selectedFilters[dimension.dimension]. includes(item) ? 'primary' : 'default'"
           style="margin: 0 5px 5px 0;"
         >
           {{ item }}
@@ -27,13 +30,19 @@
       <masonry-wall :items="filteredItems" :ssr-columns="1" :column-width="250" :gap="16">
         <template #default="{ item }">
           <a :href="item.link" target="_blank" style="text-decoration: none; color: inherit;">
-          <el-card :body-style="{ padding: '5px' }" shadow="hover" class="card-contaier">
+            <el-card :body-style="{ padding: '5px' }" shadow="hover" class="card-contaier">      
             <img :src="'/img/' + item.image" class="card-image" alt="card image">
             <div class="card-content">
               <h3 class="atlas-title">{{ item.title }}</h3>
-              <el-button type="primary" size="small" text bg>{{ item.genre }}</el-button>
+              <div class="button-badge-wrapper">
+                <el-button type="primary" size="small" text bg>{{ item.Genre }}</el-button>
+                <template v-if="filteredItems.indexOf(item) < 2">
+                  <el-button type="success" round size="small" style="margin-left: 0;">New!</el-button>
+                </template>
+              </div>
             </div>
-          </el-card>
+            
+            </el-card>
         </a>
         </template>
       </masonry-wall>
@@ -54,16 +63,29 @@ const capitalizeFirstLetter = (string) => {
 }
 
 const selectedFilters = ref({
-  genre: [],
-  data: [],
-  'entry page': [],
-  'content page': [],
-  'atlas structure': [],
-  'vis interaction': [],
-  'atlas navigation': [],
-  'onboarding':[],
-  'transparency': []
+  Genre: [],
+  Data: [],
+  'Entry page': [],
+  'Content page': [],
+  'Atlas structure': [],
+  'Vis interaction': [],
+  'Vis type': [],
+  'Atlas navigation': [],
+  'Onboarding':[],
+  'Transparency': []
 });
+
+// const selectedFilters = ref({
+//   genre: [],
+//   data: [],
+//   'entry page': [],
+//   'content page': [],
+//   'atlas structure': [],
+//   'vis interaction': [],
+//   'atlas navigation': [],
+//   'onboarding':[],
+//   'transparency': []
+// });
 
 const dimensions = ref([]);
 
@@ -80,7 +102,7 @@ function parseCSV(text) {
 
 onMounted(async () => {
   try {
-    const responseCollection = await fetch('/collection-full.csv');
+    const responseCollection = await fetch('/data.csv');
     const csvText = await responseCollection.text();
     items.value = parseCSV(csvText);
     console.log(items.value)
@@ -120,13 +142,30 @@ const filteredItems = computed(() => {
     }
   });
 
-  return Array.from(uniqueItems).map(item => JSON.parse(item));
+  return Array.from(uniqueItems)
+    .map(item => JSON.parse(item))
+    .sort((a, b) => b.id - a.id);
 });
+// });
 </script>
 
 <style scoped>
+.call-for-contributions {
+  background-color: #f9f9f9;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 10px 0;
+  /* border-bottom: #7caef9 1px solid; */
+}
+
+a {
+  color: #2626ec;
+  text-decoration: none;
+}
+
 .container {
-  margin:3% 2%;
+  margin:2% 2%;
 }
 
 .filter-container {
@@ -176,6 +215,12 @@ const filteredItems = computed(() => {
   /* margin-bottom: 20px;  */
   border-bottom: 1px solid #ccc; 
   padding: 10px; 
+}
+
+.button-badge-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
 }
 
 /* .custom-button:hover {

@@ -1,0 +1,36 @@
+id,title,link,description,image,Storybank,Observatory,Series,Monograph,Exploratoria,Updatable,Multiple sources,External dataset,Internal dataset,Featured,Random data,Metadata,Personalisation,Table of content,Lenses,Interactive vis,Vis screenshot,Cover vis/teaser,Report,Article,Dashboard,Exploratory vis,Chart collection,Table,Combination,Parallel,Hiearchical,Multifacets,No structure,Create focus,Customize data,Switch views,Coordinated views,Configure layout,Search,Visual Identity,Structural overview,Page links,Walkthrough,Glossary,Video,Textual user guide,Data sourced,Export data/vis,Open sourced,Quality Evaluation,Methodology
+1,Healthy Communities NC,https://healthycommunitiesnc.org/,xx,1.png,1,,,,,1,1,1,,,,,1,,,,,1,1,,,,,,,1,,,,1,1,,,,1,,1,,,,,,1,1,,,
+2,State of the Union in Numbers,https://usafacts.org/state-of-the-union/,xx,2.png,1,,,,,1,1,1,,,,,,1,,,,,1,,,,,,,1,,,,1,,,,,,,1,1,,,,,1,1,,,
+3,Our World in Data,https://ourworldindata.org/,xx,3.png,1,,,,,1,1,1,,1,,,1,1,1,,,,1,1,,1,1,,1,,1,,,1,1,1,,,1,,1,1,,,,,1,1,,,1
+4,Data USA,https://datausa.io/,xx,4.png,1,,,,,1,1,1,,1,1,1,,1,,,,1,1,,1,1,,,,1,1,,,1,1,1,1,1,1,1,1,1,,1,1,,1,1,,,1
+5,World Water Atlas,https://www.worldwateratlas.org/,xx,5.png,1,,,,,1,1,1,,1,,,,,1,1,,,,1,,,,,1,1,1,,,1,,,,,,1,,1,,,1,,,,,,
+6,Metroverse: Urban economy navigator,https://metroverse.cid.harvard.edu/,xx,6.png,,1,,,,1,,1,,,,,1,,,1,,,,,1,1,,1,,1,,,,1,1,1,,,1,,1,,1,1,,,1,1,,1,1
+7,SDG tracker,https://ourworldindata.org/sdgs,xx,7.png,,1,,,,1,1,1,,,,,,1,,,,,1,,,,,,,1,,,,1,1,1,1,,,,1,,,,,,1,1,,,
+8,AI Policy Observatory,https://oecd.ai/,xx,8.png,,1,,,,1,1,1,,,,,,1,1,,,,1,,,1,,,,1,,1,,1,1,,,,,,1,,,,,,1,1,,,
+9,The Observatory of Economic Complexity,https://games.oec.world/en,xx,9.png,,1,,,,1,1,1,,1,1,1,1,,1,,1,,1,,,1,,,,1,,1,,1,1,1,1,,1,,1,1,,1,,,1,1,,,
+10,PAX database,https://www.peaceagreements.org/,xx,10.png,,1,,,,1,1,1,1,1,,,,,1,,1,,,,1,1,,1,,1,,1,,1,1,,,,1,,1,,,,,,1,1,1,,
+11,Rare Diseases Observatory,https://rarediseases.ijs.si/,xx,11.png,,1,,,,1,1,1,,,,,,1,,,,1,,,1,,,,,,,1,,1,1,,,,1,,1,,,,,,1,1,,,1
+12,Atlas of Sustainable Development Goals 2017,https://datatopics.worldbank.org/sdgatlas/archive/2017/index.html,xx,12.png,,,1,,,,,,1,,,,,1,,,,,1,,,,,,,1,,,,,,,,,,,1,,,,,,1,,,,
+13,Atlas of Sustainable Development Goals 2018,https://datatopics.worldbank.org/sdgatlas/archive/2018/,xx,13.png,,,1,,,,,,1,,,,,1,,,,,,,,,1,,,1,,,,,,,,,,,1,,,,,,1,1,1,,
+14,Atlas of Sustainable Development Goals 2020,https://datatopics.worldbank.org/sdgatlas/archive/2020/,xx,14.png,,,1,,,,,,1,,,,,1,,,,,,1,,,,,,1,,,,,,,,,,,,,,,,,1,,,,
+15,Atlas of Sustainable Development Goals 2023,https://datatopics.worldbank.org/sdgatlas?lang=en,xx,15.png,,,1,,,,1,1,1,,,,1,1,,,,1,,1,,,,,,1,,,,1,,,,,1,1,1,1,,,1,,1,1,1,,
+16,Budapest Open Data Atlaza,https://atlo.team/boda/,xx,16.png,,,,1,,,1,1,,,,,,1,,,1,,,,,,1,,,1,,,,,,,,,,,1,,,,,,1,1,,,1
+17,Atlante Calvino,https://atlantecalvino.unige.ch/,xx,17.png,,,,1,,,,,1,,,,,1,,,,,,1,,1,,,,,1,,,1,1,,,,1,1,1,,,,1,1,1,1,,,1
+18,ACLED Conflict Index,https://acleddata.com/conflict-index/,xx,18.png,,,,,1,1,,,1,1,,,,1,1,,1,,,1,1,,,,,,,,1,1,1,,,,1,,1,1,,1,,1,1,1,,,1
+19,The Atlas of Economic Complexity,https://atlas.cid.harvard.edu/,xx,19.png,,,,,1,1,,,1,1,,,,,1,,1,,1,1,,1,,,,1,,1,,1,1,1,,,1,,1,1,1,1,1,1,1,1,,1,1
+20,Gender Data Portal,https://genderdata.worldbank.org/,xx,20.png,,,,,1,1,,,1,1,,,,,1,,1,,1,1,,1,,,,1,,1,,1,1,1,,,1,,1,1,,,,1,1,1,,1,1
+21,Pantheon,https://pantheon.world/,xx,21.png,,,,,1,,,,1,1,,,1,,1,,,,1,,,1,,1,,1,,1,,1,1,1,,,1,,1,1,,,,,1,1,,,1
+22,Better Life Index,https://www.oecdbetterlifeindex.org/,xx,22.png,,,,,1,1,,,1,,,,1,1,1,1,1,,1,1,,1,,,,1,,1,,1,1,,1,,,,1,1,,,,1,1,1,,,1
+23,Uppsala Conflict Data Program,https://ucdp.uu.se/,xx,23.png,,,,,1,1,,,1,,,,1,,,1,,,,,1,1,1,,,1,,1,,1,1,,,,1,,,1,,,1,1,1,1,,1,1
+24,IPCC WGI Interactive Atlas,https://interactive-atlas.ipcc.ch/,xx,24.png,,,,,1,,,,1,,,,1,,,,,1,,,,1,,1,1,,,1,,1,1,1,1,1,,,,,1,,1,1,1,1,1,,1
+25,The Opportunity Atlas,https://www.opportunityatlas.org/,xx,25.png,,,,,1,1,,,1,,,,1,,,1,,,,1,,1,,,,1,,,,1,1,1,,,1,1,,1,1,,1,,1,1,,,1
+26,The Social Capital Atas,https://socialcapital.org/,xx,26.png,,,,,1,1,,,1,,,1,1,1,,,,,,,,1,,,,1,,,,1,1,1,,,1,1,1,,1,,,,1,1,,,1
+27,Pheniox Health Dashboard,https://phoenix-data.wayne.edu/map/general/bphigh/all%20data/tract/basic?geo=tract26163517500&state=state26&parentgeolevel=state&zoom=6,xx,27.png,,,,,1,1,,,1,,,,,,,1,,,,,,1,,,,1,,,,1,1,,,,1,,1,,1,,,,1,1,,,
+28,Brain Atlases,https://www.humanbrainproject.eu/en/science-development/focus-areas/brain-atlases/,xx,28.png,,,,,1,,,,1,,,,,1,,,1,,,,,1,,,,1,,,,1,1,,,,,,,,1,,,,1,1,,,1
+29,AgEvidence,https://www.agevidence.org/,xx,29.png,,,,,1,1,,,1,,,1,,,,,1,,,1,,1,,,1,1,1,,,1,1,,,,,,1,,,,,,1,1,,,1
+30,The U.S. Climate Vulnerability Index,https://climatevulnerabilityindex.org/,xx,30.png,,,,,1,1,,,1,,,,,,,,1,,1,,,1,,,,1,1,,,1,1,,,,1,1,1,,1,,1,1,1,1,1,,1
+31,UCLA Energy Atlas,https://www.energyatlas.ucla.edu/,xx,31.png,,,,,1,1,,,1,,,,,1,,,,1,,1,,1,,,,1,,,,1,1,,1,,,,,,,,,1,1,1,,1,1
+32,Copernicus Interactive Climate Atlas,https://climate.copernicus.eu/copernicus-interactive-climate-atlas-guide-powerful-new-c3s-tool?utm_source=socialmedia&utm_medium=tw&utm_id=news-climate-atlas-0224,xx,32.png,,,,,1,,,1,,,,,,,,1,,,,,,1,,,,,,,1,1,1,,,,,,,,,,,1,1,1,,,1
+33,The Tree Library,https://treelibrary.org/,xx,33.png,,,,,1,1,,,1,1,,,,,,1,,,,,,1,,1,,,1,,,1,,,,,,1,,1,,,,1,,,,,
+34,Atlas of Energy Transitions,https://storymaps.arcgis.com/collections/1e05ebf390554cb8b7cefa80e521afda,xx,34.png,1,,,,,,1,1,,,,,,1,,,,1,,1,,,,,,1,,,,1,,,1,,,,1,,,,,,1,,,,
+35,Australian Cancer Atlas,https://atlas.cancer.org.au,xx,35.png,,,,,1,,,,1,1,,,,1,,,1,,,1,,1,,,,,,1,,1,1,,,,1,,1,,1,1,,1,1,,,,1
